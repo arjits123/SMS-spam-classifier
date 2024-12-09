@@ -66,4 +66,3 @@ if __name__ == "__main__":
     cleaned_df = data_transformation.clean_data(data_path = raw_data_path)
     new_df = data_transformation.data_preprocessing(data_frame = cleaned_df)
     X_train,X_test,y_train,y_test = data_transformation.initiate_data_transformation(data = new_df)
-    print(X_train.shape)
