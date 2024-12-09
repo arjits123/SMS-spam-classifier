@@ -13,6 +13,7 @@ import numpy as np
 
 #local importing
 from data_transformation import DataTransformation
+from model_development import ModelTrainer
 
 #Data ingestion config class to input the csv file
 @dataclass #Directly define the class variable
@@ -66,3 +67,7 @@ if __name__ == "__main__":
     cleaned_df = data_transformation.clean_data(data_path = raw_data_path)
     new_df = data_transformation.data_preprocessing(data_frame = cleaned_df)
     X_train,X_test,y_train,y_test = data_transformation.initiate_data_transformation(data = new_df)
+
+    # Model trainer
+    model_trainer = ModelTrainer()
+    print(model_trainer.initiate_model_trainer(X_train=X_train, X_test=X_test, y_train=y_train, y_test=y_test))

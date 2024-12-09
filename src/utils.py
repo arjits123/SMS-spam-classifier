@@ -20,6 +20,8 @@ punctuations = string.punctuation
 from nltk.stem.porter import PorterStemmer
 ps = PorterStemmer()
 
+from sklearn.metrics import accuracy_score,confusion_matrix, precision_score
+
 
 def save_obj(file_path, obj):
     try:
