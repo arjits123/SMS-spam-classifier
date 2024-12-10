@@ -45,7 +45,6 @@ class DataTransformation:
             df['transformed_text'] = df['SMS'].apply(transform_text)
             encoder = LabelEncoder()
             df['Target'] = encoder.fit_transform(df['Target'])
-
             return df
 
         except Exception as e:
